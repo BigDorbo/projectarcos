@@ -20,16 +20,8 @@ namespace ProjectArcos
 			Pawn p = this.parent as Pawn;
 			if (p == null || !p.Spawned || p.Map == null || p.Dead || p.Downed) return;
 
-			Pawn_AbilityTracker tracker = p.abilities;
-			if (tracker == null) return;
-
-			Ability ab = tracker.GetAbility(Props.ability, false);
-			if (ab == null)
-			{
-				tracker.GainAbility(Props.ability);
-				ab = tracker.GetAbility(Props.ability, false);
-				if (ab == null) return;
-			}
+			Ability ab = EnsureAbility(p);
+			if (ab == null) return;
 
 			if (!primed)
 			{
@@ -48,6 +40,54 @@ namespace ProjectArcos
 				if (!effects[i].AICanTargetNow(p)) return;
 
 			p.jobs.StartJob(ab.GetJob(p, p), JobCondition.InterruptForced);
+		}
+
+		public override IEnumerable<Gizmo> CompGetGizmosExtra()
+		{
+			if (!DebugSettings.ShowDevGizmos || Props.ability == null) yield break;
+
+			Pawn p = this.parent as Pawn;
+			if (p == null || !p.Spawned) yield break;
+
+			yield return new Command_Action
+			{
+				defaultLabel = "DEV: Cast " + Props.ability.label,
+				action = delegate
+				{
+					Ability ab = EnsureAbility(p);
+					if (ab == null) return;
+
+					primed = true;
+					ab.Activate(p, p);
+				}
+			};
+
+			yield return new Command_Action
+			{
+				defaultLabel = "DEV: Reset hoard cooldown",
+				action = delegate
+				{
+					Ability ab = EnsureAbility(p);
+					if (ab == null) return;
+
+					primed = true;
+					ab.ResetCooldown();
+				}
+			};
+		}
+
+		private Ability EnsureAbility(Pawn p)
+		{
+			if (p.abilities == null) p.abilities = new Pawn_AbilityTracker(p);
+
+			Ability ab = p.abilities.GetAbility(Props.ability, false);
+			if (ab == null)
+			{
+				p.abilities.GainAbility(Props.ability);
+				ab = p.abilities.GetAbility(Props.ability, false);
+			}
+
+			return ab;
 		}
 
 		public override void PostExposeData()

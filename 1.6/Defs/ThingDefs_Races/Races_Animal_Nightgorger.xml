@@ -134,6 +134,9 @@
 
 	<PawnKindDef ParentName="AnimalKindBase">
 		<defName>PA_Nightgorger</defName>
+		<abilities>
+			<li>PA_CraftPellet</li>
+		</abilities>
 		<label>nightgorger</label>
 		<ecoSystemWeight>3</ecoSystemWeight>
 		<combatPower>300</combatPower>

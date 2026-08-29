@@ -127,6 +127,9 @@
 
 	<PawnKindDef ParentName="AnimalKindBase">
 		<defName>PA_Mudlurker</defName>
+		<abilities>
+			<li>PA_CraftCache</li>
+		</abilities>
 		<ecoSystemWeight>0.5</ecoSystemWeight>
 		<label>mudlurker</label>
 		<race>PA_Mudlurker</race>
