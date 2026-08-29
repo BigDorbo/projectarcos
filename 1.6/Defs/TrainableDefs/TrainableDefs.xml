@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+	<TrainableDef Name="PA_TrainableBase" Abstract="True">
+		<icon>UI/Icons/Trainables/Haul</icon>
+		<difficulty>60</difficulty>
+		<minBodySize>1</minBodySize>
+		<requiredTrainability>Intermediate</requiredTrainability>
+		<listPriority>50</listPriority>
+		<specialTrainable>true</specialTrainable>
+		<steps>1</steps>
+	</TrainableDef>
+
+	<TrainableDef ParentName="PA_TrainableBase" MayRequireAnyOf="Ludeon.RimWorld.Odyssey,VanillaExpanded.VCEF">
+		<defName>PA_CacheCraft</defName>
+		<label>hoard fish</label>
+		<description>The animal will occasionally hoard a small cache of fish if the map has open water.</description>
+	</TrainableDef>
+
+	<TrainableDef ParentName="PA_TrainableBase">
+		<defName>PA_PelletCraft</defName>
+		<label>regurgitate</label>
+		<description>The animal will rarely expel a pellet of remains containing a small amount of leather.</description>
+	</TrainableDef>
+
+</Defs>

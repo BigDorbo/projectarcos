@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+	<GeneDef Name="PA_GeneVoiceBase" ParentName="GeneVoiceBase" MayRequire="Ludeon.RimWorld.Biotech" Abstract="True">
+		<biostatCpx>1</biostatCpx>
+		<exclusionTags>
+			<li>Voice</li>
+		</exclusionTags>
+	</GeneDef>
+
+	<GeneDef ParentName="PA_GeneVoiceBase" MayRequire="Ludeon.RimWorld.Biotech">
+		<defName>PA_Gene_VoiceLoraptora</defName>
+		<label>loraptora voice</label>
+		<description>Carriers sound like a loraptora.</description>
+		<iconPath>UI/Icons/Genes/Gene_VoiceHuman</iconPath>
+		<displayOrderInCategory>160</displayOrderInCategory>
+		<soundCall>PA_Loraptora_Call</soundCall>
+		<soundWounded>PA_Loraptora_Wounded</soundWounded>
+		<soundDeath>PA_Loraptora_Death</soundDeath>
+		<symbolPack>
+			<wholeNameSymbols>
+				<li><symbol>trillfang</symbol></li>
+				<li><symbol>chitterer</symbol></li>
+				<li><symbol>swiftjaw</symbol></li>
+			</wholeNameSymbols>
+			<prefixSymbols>
+				<li><symbol>trill</symbol></li>
+				<li><symbol>skree</symbol></li>
+				<li><symbol>lora</symbol></li>
+			</prefixSymbols>
+			<suffixSymbols>
+				<li><symbol>chit</symbol></li>
+				<li><symbol>claw</symbol></li>
+				<li><symbol>trill</symbol></li>
+			</suffixSymbols>
+		</symbolPack>
+	</GeneDef>
+
+	<GeneDef ParentName="PA_GeneVoiceBase" MayRequire="Ludeon.RimWorld.Biotech">
+		<defName>PA_Gene_VoiceMudlurker</defName>
+		<label>mudlurker voice</label>
+		<description>Carriers sound like a mudlurker.</description>
+		<iconPath>UI/Icons/Genes/Gene_VoiceRoar</iconPath>
+		<displayOrderInCategory>161</displayOrderInCategory>
+		<soundCall>PA_Mudlurker_Call</soundCall>
+		<soundWounded>PA_Mudlurker_Wounded</soundWounded>
+		<soundDeath>PA_Mudlurker_Death</soundDeath>
+		<symbolPack>
+			<wholeNameSymbols>
+				<li><symbol>bogthroat</symbol></li>
+				<li><symbol>croaker</symbol></li>
+				<li><symbol>silttongue</symbol></li>
+			</wholeNameSymbols>
+			<prefixSymbols>
+				<li><symbol>glub</symbol></li>
+				<li><symbol>murk</symbol></li>
+				<li><symbol>bog</symbol></li>
+			</prefixSymbols>
+			<suffixSymbols>
+				<li><symbol>croak</symbol></li>
+				<li><symbol>lurk</symbol></li>
+				<li><symbol>gulp</symbol></li>
+			</suffixSymbols>
+		</symbolPack>
+	</GeneDef>
+
+	<GeneDef ParentName="PA_GeneVoiceBase" MayRequire="Ludeon.RimWorld.Biotech">
+		<defName>PA_Gene_VoiceClubtail</defName>
+		<label>clubtail voice</label>
+		<description>Carriers sound like a clubtail.</description>
+		<iconPath>UI/Icons/Genes/Gene_VoiceRoar</iconPath>
+		<displayOrderInCategory>162</displayOrderInCategory>
+		<soundCall>PA_Clubtail_Call</soundCall>
+		<soundWounded>PA_Clubtail_Wounded</soundWounded>
+		<soundDeath>PA_Clubtail_Death</soundDeath>
+		<symbolPack>
+			<wholeNameSymbols>
+				<li><symbol>bellower</symbol></li>
+				<li><symbol>thumpvoice</symbol></li>
+				<li><symbol>hornhuff</symbol></li>
+			</wholeNameSymbols>
+			<prefixSymbols>
+				<li><symbol>bell</symbol></li>
+				<li><symbol>huff</symbol></li>
+				<li><symbol>clun</symbol></li>
+			</prefixSymbols>
+			<suffixSymbols>
+				<li><symbol>thud</symbol></li>
+				<li><symbol>bellow</symbol></li>
+				<li><symbol>tail</symbol></li>
+			</suffixSymbols>
+		</symbolPack>
+	</GeneDef>
+
+	<GeneDef ParentName="PA_GeneVoiceBase" MayRequire="Ludeon.RimWorld.Biotech">
+		<defName>PA_Gene_VoiceShearbeak</defName>
+		<label>shearbeak voice</label>
+		<description>Carriers sound like a shearbeak.</description>
+		<iconPath>UI/Icons/Genes/Gene_VoiceHuman</iconPath>
+		<displayOrderInCategory>163</displayOrderInCategory>
+		<soundCall>PA_Shearbeak_Call</soundCall>
+		<soundWounded>PA_Shearbeak_Wounded</soundWounded>
+		<soundDeath>PA_Shearbeak_Death</soundDeath>
+		<symbolPack>
+			<wholeNameSymbols>
+				<li><symbol>rasper</symbol></li>
+				<li><symbol>whistlebeak</symbol></li>
+				<li><symbol>screecher</symbol></li>
+			</wholeNameSymbols>
+			<prefixSymbols>
+				<li><symbol>skra</symbol></li>
+				<li><symbol>whis</symbol></li>
+				<li><symbol>shear</symbol></li>
+			</prefixSymbols>
+			<suffixSymbols>
+				<li><symbol>rasp</symbol></li>
+				<li><symbol>screech</symbol></li>
+				<li><symbol>beak</symbol></li>
+			</suffixSymbols>
+		</symbolPack>
+	</GeneDef>
+
+	<GeneDef ParentName="PA_GeneVoiceBase" MayRequire="Ludeon.RimWorld.Biotech">
+		<defName>PA_Gene_VoiceNightgorger</defName>
+		<label>nightgorger voice</label>
+		<description>Carriers sound like a nightgorger.</description>
+		<iconPath>UI/Icons/Genes/Gene_VoiceRoar</iconPath>
+		<displayOrderInCategory>164</displayOrderInCategory>
+		<soundCall>PA_Nightgorger_Call</soundCall>
+		<soundWounded>PA_Nightgorger_Wounded</soundWounded>
+		<soundDeath>PA_Nightgorger_Death</soundDeath>
+		<symbolPack>
+			<wholeNameSymbols>
+				<li><symbol>deepmaw</symbol></li>
+				<li><symbol>gravethroat</symbol></li>
+				<li><symbol>rumbler</symbol></li>
+			</wholeNameSymbols>
+			<prefixSymbols>
+				<li><symbol>gor</symbol></li>
+				<li><symbol>night</symbol></li>
+				<li><symbol>drum</symbol></li>
+			</prefixSymbols>
+			<suffixSymbols>
+				<li><symbol>maw</symbol></li>
+				<li><symbol>rumble</symbol></li>
+				<li><symbol>gorge</symbol></li>
+			</suffixSymbols>
+		</symbolPack>
+	</GeneDef>
+
+</Defs>

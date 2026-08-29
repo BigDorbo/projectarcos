@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+	<BodyPartGroupDef>
+		<defName>PA_SickleClaws</defName>
+		<label>sickle claws</label>
+	</BodyPartGroupDef>
+
+	<BodyPartGroupDef>
+		<defName>PA_ThumbSpikes</defName>
+		<label>thumb spikes</label>
+	</BodyPartGroupDef>
+
+	<BodyPartGroupDef>
+		<defName>PA_Quills</defName>
+		<label>quills</label>
+	</BodyPartGroupDef>
+
+	<BodyPartGroupDef>
+		<defName>PA_TailClub</defName>
+		<label>tail club</label>
+		<labelShort>club</labelShort>
+	</BodyPartGroupDef>
+
+</Defs>

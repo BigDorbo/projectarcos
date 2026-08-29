@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+	<JobDef>
+		<defName>PA_Spar</defName>
+		<driverClass>ProjectArcos.JobDriver_Spar</driverClass>
+		<reportString>sparring.</reportString>
+	</JobDef>
+
+</Defs>

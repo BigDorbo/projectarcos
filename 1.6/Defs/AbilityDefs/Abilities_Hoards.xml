@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+	<AbilityDef Name="PA_HoardAbilityBase" Abstract="True">
+		<aiCanUse>false</aiCanUse>
+		<targetRequired>false</targetRequired>
+		<displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
+		<disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+		<sendMessageOnCooldownComplete>false</sendMessageOnCooldownComplete>
+		<casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+		<cooldownTicksRange>122500~150000</cooldownTicksRange>
+		<verbProperties>
+			<verbClass>Verb_CastAbility</verbClass>
+			<warmupTime>5</warmupTime>
+			<range>3.9</range>
+			<drawAimPie>false</drawAimPie>
+			<requireLineOfSight>false</requireLineOfSight>
+			<targetParams>
+				<canTargetSelf>true</canTargetSelf>
+				<canTargetPawns>true</canTargetPawns>
+				<canTargetAnimals>true</canTargetAnimals>
+				<canTargetHumans>false</canTargetHumans>
+				<canTargetMechs>false</canTargetMechs>
+				<canTargetBuildings>false</canTargetBuildings>
+				<canTargetLocations>false</canTargetLocations>
+			</targetParams>
+		</verbProperties>
+	</AbilityDef>
+
+	<AbilityDef ParentName="PA_HoardAbilityBase">
+		<defName>PA_CraftCache</defName>
+		<label>hoard fish</label>
+		<description>Gather fish from nearby water and pile them into a hidden cache.</description>
+		<iconPath>UI/WantIcons/PA_WantCache</iconPath>
+		<comps>
+			<li Class="ProjectArcos.CompProperties_AbilitySpawnHoard">
+				<thingToSpawn>PA_MudlurkerCache</thingToSpawn>
+				<maxCount>2</maxCount>
+				<requiresMapWater>true</requiresMapWater>
+				<spawnSound>Standard_Drop</spawnSound>
+				<dropRulePack>PA_Event_CacheDrop</dropRulePack>
+				<requiredTrainable>PA_CacheCraft</requiredTrainable>
+			</li>
+		</comps>
+	</AbilityDef>
+
+	<AbilityDef ParentName="PA_HoardAbilityBase">
+		<defName>PA_CraftPellet</defName>
+		<label>regurgitate</label>
+		<description>Heave up a pellet of indigestible remains.</description>
+		<iconPath>UI/WantIcons/PA_WantPellet</iconPath>
+		<comps>
+			<li Class="ProjectArcos.CompProperties_AbilitySpawnHoard">
+				<thingToSpawn>PA_NightgorgerPellet</thingToSpawn>
+				<maxCount>3</maxCount>
+				<spawnSound>Standard_Drop</spawnSound>
+				<dropRulePack>PA_Event_PelletDrop</dropRulePack>
+				<requiredTrainable>PA_PelletCraft</requiredTrainable>
+			</li>
+		</comps>
+	</AbilityDef>
+
+</Defs>

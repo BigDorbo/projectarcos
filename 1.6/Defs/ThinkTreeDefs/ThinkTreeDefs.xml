@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+	<ThinkTreeDef>
+		<defName>PA_SparSubtree</defName>
+		<insertTag>Animal_PreWander</insertTag>
+		<insertPriority>100</insertPriority>
+		<thinkRoot Class="ProjectArcos.JobGiver_AnimalSpar" />
+	</ThinkTreeDef>
+
+</Defs>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+	<BodyPartDef>
+		<defName>PA_SickleClaw</defName>
+		<label>sickle claw</label>
+		<hitPoints>10</hitPoints>
+		<frostbiteVulnerability>0</frostbiteVulnerability>
+		<permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
+		<skinCovered>false</skinCovered>
+	</BodyPartDef>
+
+	<BodyPartDef>
+		<defName>PA_ThumbSpike</defName>
+		<label>thumb spike</label>
+		<hitPoints>12</hitPoints>
+		<frostbiteVulnerability>0</frostbiteVulnerability>
+		<permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
+		<skinCovered>false</skinCovered>
+	</BodyPartDef>
+
+	<BodyPartDef>
+		<defName>PA_BonyGrowth</defName>
+		<label>bony growth</label>
+		<hitPoints>20</hitPoints>
+		<frostbiteVulnerability>0</frostbiteVulnerability>
+		<permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
+		<skinCovered>false</skinCovered>
+	</BodyPartDef>
+
+</Defs>

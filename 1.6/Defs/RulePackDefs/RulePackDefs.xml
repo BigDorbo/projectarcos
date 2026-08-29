@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+	<RulePackDef>
+		<defName>PA_Event_Spar</defName>
+		<rulePack>
+			<rulesStrings>
+				<li>r_logentry->[INITIATOR_definite] sparred with [SUBJECT_definite], landing a solid blow.</li>
+				<li>r_logentry->[INITIATOR_definite] tested [SUBJECT_definite] in a sparring bout and drew first blood.</li>
+				<li>r_logentry->[INITIATOR_definite] and [SUBJECT_definite] circled and clashed in a friendly bout.</li>
+				<li>r_logentry->[INITIATOR_definite] shoved [SUBJECT_definite] back a full stride in a trial of strength.</li>
+				<li>r_logentry->[INITIATOR_definite] traded ringing blows with [SUBJECT_definite] until both relented.</li>
+				<li>r_logentry->[INITIATOR_definite] threw [SUBJECT_definite] off balance in a spar.</li>
+			</rulesStrings>
+		</rulePack>
+	</RulePackDef>
+
+	<RulePackDef>
+		<defName>PA_Event_CacheDrop</defName>
+		<rulePack>
+			<rulesStrings>
+				<li>r_logentry->[SUBJECT_definite] packed a fresh cache of fish and wood.</li>
+				<li>r_logentry->[SUBJECT_definite] heaped a cache together.</li>
+				<li>r_logentry->[SUBJECT_definite] gathered a hoard into place.</li>
+				<li>r_logentry->[SUBJECT_definite] finished a new cache.</li>
+				<li>r_logentry->[SUBJECT_definite] deposited some fish into a hoard.</li>
+			</rulesStrings>
+		</rulePack>
+	</RulePackDef>
+
+	<RulePackDef>
+		<defName>PA_Event_PelletDrop</defName>
+		<rulePack>
+			<rulesStrings>
+				<li>r_logentry->[SUBJECT_definite] heaved up a heavy pellet of bone and hide.</li>
+				<li>r_logentry->[SUBJECT_definite] regurgitated a dense pellet with a wet crash.</li>
+				<li>r_logentry->[SUBJECT_definite] gagged and brought up a compacted mass of remains.</li>
+				<li>r_logentry->[SUBJECT_definite] shuddered, lowered its head, and disgorged a reeking pellet.</li>
+				<li>r_logentry->[SUBJECT_definite] coughed a matted pellet onto the ground and walked on.</li>
+			</rulesStrings>
+		</rulePack>
+	</RulePackDef>
+
+</Defs>

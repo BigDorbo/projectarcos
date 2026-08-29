@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+	<ThingDef Name="PA_HoardBase" Abstract="True">
+		<category>Building</category>
+		<thingClass>Building</thingClass>
+		<altitudeLayer>BuildingOnTop</altitudeLayer>
+		<graphicData>
+			<graphicClass>Graphic_Random</graphicClass>
+		</graphicData>
+		<passability>PassThroughOnly</passability>
+		<rotatable>false</rotatable>
+		<selectable>true</selectable>
+		<leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+		<building>
+			<claimable>false</claimable>
+			<deconstructible>false</deconstructible>
+		</building>
+	</ThingDef>
+
+	<ThingDef ParentName="PA_HoardBase">
+		<defName>PA_MudlurkerCache</defName>
+		<label>mudlurker cache</label>
+		<description>A mound of wood and fish. When broken open it will scatter fish but may anger its creator.</description>
+		<graphicData>
+			<texPath>Things/Building/PA_MudlurkerCache</texPath>
+			<drawSize>2.1</drawSize>
+		</graphicData>
+		<size>(2, 1)</size>
+		<pathCost>40</pathCost>
+		<fillPercent>0.5</fillPercent>
+		<statBases>
+			<MaxHitPoints>150</MaxHitPoints>
+			<Flammability>0.6</Flammability>
+		</statBases>
+		<comps>
+			<li Class="ProjectArcos.CompProperties_LootBurst">
+				<lootDefNames>
+					<li>Fish_Bass</li>
+					<li>Fish_Bluefish</li>
+					<li>Fish_Catfish</li>
+					<li>Fish_Cod</li>
+					<li>Fish_Dogfish</li>
+					<li>Fish_Flounder</li>
+					<li>Fish_Frostfish</li>
+					<li>Fish_Guppy</li>
+					<li>Fish_Marlin</li>
+					<li>Fish_Piranha</li>
+					<li>Fish_Salmon</li>
+					<li>Fish_Tilapia</li>
+					<li>Fish_Toxfish</li>
+					<li>Fish_Tuna</li>
+					<li>VCEF_RawAnchovy</li>
+					<li>VCEF_RawAngelfish</li>
+					<li>VCEF_RawAnglerfish</li>
+					<li>VCEF_RawBass</li>
+					<li>VCEF_RawCatfish</li>
+					<li>VCEF_RawClownfish</li>
+					<li>VCEF_RawCod</li>
+					<li>VCEF_RawEel</li>
+					<li>VCEF_RawGoldfish</li>
+					<li>VCEF_RawGuppy</li>
+					<li>VCEF_RawHaddock</li>
+					<li>VCEF_RawHalibut</li>
+					<li>VCEF_RawHerring</li>
+					<li>VCEF_RawKoi</li>
+					<li>VCEF_RawLobster</li>
+					<li>VCEF_RawMackerel</li>
+					<li>VCEF_RawMinnow</li>
+					<li>VCEF_RawPerch</li>
+					<li>VCEF_RawPiranha</li>
+					<li>VCEF_RawPufferfish</li>
+					<li>VCEF_RawSalmon</li>
+					<li>VCEF_RawSprat</li>
+					<li>VCEF_RawSwordfish</li>
+					<li>VCEF_RawTrout</li>
+					<li>VCEF_RawTuna</li>
+				</lootDefNames>
+				<countRange>6~6</countRange>
+				<guaranteedDefName>WoodLog</guaranteedDefName>
+				<guaranteedCount>3</guaranteedCount>
+				<angerChance>0.1</angerChance>
+				<angerLetterLabel>Cache broken</angerLetterLabel>
+				<angerLetterText>A mudlurker has gone into a rage over the destruction of its cache. It will attack anyone it sees.</angerLetterText>
+				<openedThought>PA_PlunderedCache</openedThought>
+				<angerOwner>true</angerOwner>
+			</li>
+		</comps>
+	</ThingDef>
+
+	<ThingDef ParentName="PA_HoardBase">
+		<defName>PA_NightgorgerPellet</defName>
+		<label>nightgorger pellet</label>
+		<description>A regurgitated mass of mostly indigestible remains. Breaking it open may yield a small amount of leather.</description>
+		<graphicData>
+			<texPath>Things/Building/PA_NightgorgerPellet</texPath>
+			<drawSize>1.08</drawSize>
+		</graphicData>
+		<pathCost>25</pathCost>
+		<fillPercent>0.35</fillPercent>
+		<statBases>
+			<MaxHitPoints>60</MaxHitPoints>
+			<Flammability>0.8</Flammability>
+		</statBases>
+		<comps>
+			<li Class="ProjectArcos.CompProperties_LootBurst">
+				<lootCategory>Leathers</lootCategory>
+				<openedThought>PA_OpenedPellet</openedThought>
+				<excludeDefNames>
+					<li>Leather_Patch</li>
+					<li>Leather_Dread</li>
+					<li>Leather_Thrumbo</li>
+				</excludeDefNames>
+				<countRange>2~10</countRange>
+			</li>
+		</comps>
+	</ThingDef>
+
+</Defs>

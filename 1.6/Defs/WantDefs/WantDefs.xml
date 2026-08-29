@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+	<WantsAndQuirks.WantDef Name="PA_WantBase" MayRequire="ferny.characterdevelopment" Abstract="True">
+		<workerClass>WantsAndQuirks.WantWorker_Thought</workerClass>
+		<commonality>1</commonality>
+		<preferIconPath>true</preferIconPath>
+		<reward>1000</reward>
+	</WantsAndQuirks.WantDef>
+
+	<WantsAndQuirks.WantDef ParentName="PA_WantBase" MayRequire="ferny.characterdevelopment">
+		<defName>ArcosCD_WantWatchSpar</defName>
+		<label>watch arcosaurs spar</label>
+		<description>I want to see the armored ones fight.</description>
+		<discoveryRequirementThing>PA_Clubtail</discoveryRequirementThing>
+		<iconPath>UI/WantIcons/PA_WantSpar</iconPath>
+		<reward>1200</reward>
+		<completedByThought>PA_WatchedSpar</completedByThought>
+	</WantsAndQuirks.WantDef>
+
+	<WantsAndQuirks.WantDef ParentName="PA_WantBase" MayRequire="ferny.characterdevelopment">
+		<defName>ArcosCD_WantPlunderCache</defName>
+		<label>plunder mudlurker cache</label>
+		<discoveryRequirementThing>PA_MudlurkerCache</discoveryRequirementThing>
+		<description>I'm interested in the fish inside.</description>
+		<iconPath>UI/WantIcons/PA_WantCache</iconPath>
+		<completedByThought>PA_PlunderedCache</completedByThought>
+	</WantsAndQuirks.WantDef>
+
+	<WantsAndQuirks.WantDef ParentName="PA_WantBase" MayRequire="ferny.characterdevelopment">
+		<defName>ArcosCD_WantOpenPellet</defName>
+		<label>plunder nightgorger pellet</label>
+		<discoveryRequirementThing>PA_NightgorgerPellet</discoveryRequirementThing>
+		<description>I want the leather inside.</description>
+		<iconPath>UI/WantIcons/PA_WantPellet</iconPath>
+		<completedByThought>PA_OpenedPellet</completedByThought>
+	</WantsAndQuirks.WantDef>
+
+</Defs>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+	<ThingDef ParentName="LeatherBase">
+		<defName>PA_ArcosaurHide</defName>
+		<label>arcosaur hide</label>
+		<description>Rough hide taken from an arcosaur. Average in battle, but ineffective against the elements.</description>
+		<graphicData>
+			<color>(58,74,72)</color>
+		</graphicData>
+		<statBases>
+			<MarketValue>4.2</MarketValue>
+			<StuffPower_Armor_Sharp>1.29</StuffPower_Armor_Sharp>
+			<StuffPower_Insulation_Cold>14</StuffPower_Insulation_Cold>
+			<StuffPower_Insulation_Heat>14</StuffPower_Insulation_Heat>
+		</statBases>
+		<stuffProps>
+			<color>(58,74,72)</color>
+			<commonality>0.025</commonality>
+			<statFactors>
+				<MaxHitPoints>100</MaxHitPoints>
+				<Beauty>2.4</Beauty>
+			</statFactors>
+		</stuffProps>
+	</ThingDef>
+
+</Defs>

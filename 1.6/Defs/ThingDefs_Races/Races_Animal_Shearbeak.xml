@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+	<ThingDef ParentName="PA_AnimalBase">
+		<defName>PA_Shearbeak</defName>
+		<label>shearbeak</label>
+		<description>Hook-beaked arcosaur with a crest of loose quills. Unless provoked, this animal is docile. Its dramatic coloring has allowed it to thrive in tropical environments.</description>
+		<statBases>
+			<MoveSpeed>4.7</MoveSpeed>
+			<MarketValue>450</MarketValue>
+			<CaravanRidingSpeedFactor>1.4</CaravanRidingSpeedFactor>
+			<ComfyTemperatureMin>-30</ComfyTemperatureMin>
+			<ComfyTemperatureMax>50</ComfyTemperatureMax>
+			<Wildness>0.7</Wildness>
+			<FilthRate>14</FilthRate>
+		</statBases>
+		<modExtensions>
+			<li MayRequire="Owlchemist.GiddyUp" Class="GiddyUp.CustomStats">
+				<speedModifier>0.95</speedModifier>
+				<armorModifier>1.05</armorModifier>
+				<useMetalArmor>false</useMetalArmor>
+			</li>
+			<li MayRequire="Owlchemist.GiddyUp" Class="GiddyUp.DrawingOffset">
+				<eastOffset>(0,0,0.25)</eastOffset>
+				<westOffset>(0,0,0.25)</westOffset>
+				<northOffset>(0,0,0.3)</northOffset>
+				<southOffset>(0,0,0.3)</southOffset>
+			</li>
+		</modExtensions>
+		<tools>
+			<li MayRequire="Ludeon.RimWorld.Odyssey">
+				<label>quills</label>
+				<capacities>
+					<li>PorcupineScratch</li>
+				</capacities>
+				<power>12</power>
+				<cooldownTime>1.8</cooldownTime>
+				<linkedBodyPartsGroup>PA_Quills</linkedBodyPartsGroup>
+			</li>
+			<li>
+				<label>beak</label>
+				<capacities>
+					<li>Bite</li>
+				</capacities>
+				<power>14</power>
+				<cooldownTime>2</cooldownTime>
+				<linkedBodyPartsGroup>Beak</linkedBodyPartsGroup>
+			</li>
+			<li>
+				<label>head</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>8</power>
+				<cooldownTime>2</cooldownTime>
+				<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+				<ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+				<chanceFactor>0.2</chanceFactor>
+			</li>
+		</tools>
+		<comps>
+			<li Class="CompProperties_EggLayer">
+				<eggFertilizedDef>PA_EggShearbeakFertilized</eggFertilizedDef>
+				<eggUnfertilizedDef>PA_EggShearbeakUnfertilized</eggUnfertilizedDef>
+				<eggFertilizationCountMax>1</eggFertilizationCountMax>
+				<eggLayIntervalDays>7</eggLayIntervalDays>
+				<eggProgressUnfertilizedMax>0.5</eggProgressUnfertilizedMax>
+				<eggCountRange>1~2</eggCountRange>
+			</li>
+		</comps>
+		<race>
+			<body>PA_ShearbeakBody</body>
+			<baseBodySize>2.4</baseBodySize>
+			<baseHealthScale>1.0</baseHealthScale>
+			<baseHungerRate>0.535</baseHungerRate>
+			<herdAnimal>true</herdAnimal>
+			<foodType>VegetarianRoughAnimal</foodType>
+			<useMeatFrom>PA_Nightgorger</useMeatFrom>
+			<packAnimal>true</packAnimal>
+			<trainability>Intermediate</trainability>
+			<petness>0.2</petness>
+			<lifeExpectancy>40</lifeExpectancy>
+			<manhunterOnDamageChance>0.75</manhunterOnDamageChance>
+			<manhunterOnTameFailChance>0.15</manhunterOnTameFailChance>
+			<soundEating>Herbivore_Eat</soundEating>
+			<lifeStageAges>
+				<li>
+					<def>AnimalBaby</def>
+					<minAge>0</minAge>
+				</li>
+				<li>
+					<def>AnimalJuvenile</def>
+					<minAge>0.15</minAge>
+				</li>
+				<li>
+					<def>AnimalAdult</def>
+					<minAge>0.35</minAge>
+					<soundWounded>PA_Shearbeak_Wounded</soundWounded>
+					<soundDeath>PA_Shearbeak_Death</soundDeath>
+					<soundCall>PA_Shearbeak_Call</soundCall>
+					<soundAngry>PA_Shearbeak_Angry</soundAngry>
+				</li>
+			</lifeStageAges>
+			<headPosPerRotation>
+				<li>(0, 0, 0.3)</li>
+				<li>(0.56, 0, 0.16)</li>
+				<li>(0, 0, -0.1)</li>
+				<li>(-0.56, 0, 0.16)</li>
+			</headPosPerRotation>
+			<wildBiomes>
+				<TropicalRainforest>0.1</TropicalRainforest>
+				<TropicalSwamp>0.1</TropicalSwamp>
+				<ZBiome_CloudForest MayRequire="zylle.MoreVanillaBiomes">0.1</ZBiome_CloudForest>
+			</wildBiomes>
+		</race>
+		<tradeTags>
+			<li>AnimalUncommon</li>
+			<li>AnimalFighter</li>
+		</tradeTags>
+	</ThingDef>
+
+	<PawnKindDef ParentName="AnimalKindBase">
+		<defName>PA_Shearbeak</defName>
+		<ecoSystemWeight>1.1</ecoSystemWeight>
+		<label>shearbeak</label>
+		<race>PA_Shearbeak</race>
+		<combatPower>150</combatPower>
+		<wildGroupSize>1~2</wildGroupSize>
+		<lifeStages>
+			<li>
+				<bodyGraphicData>
+					<texPath>Things/Pawn/Animal/PA_Shearbeak/Shearbeak</texPath>
+					<drawSize>2.72</drawSize>
+					<shadowData>
+						<volume>(0.8, 0.6, 0.8)</volume>
+						<offset>(0, 0, -0.2)</offset>
+					</shadowData>
+				</bodyGraphicData>
+				<dessicatedBodyGraphicData>
+					<texPath>Things/Pawn/Animal/PA_Shearbeak/Desiccated_Shearbeak</texPath>
+					<drawSize>2.72</drawSize>
+				</dessicatedBodyGraphicData>
+			</li>
+			<li>
+				<bodyGraphicData>
+					<texPath>Things/Pawn/Animal/PA_Shearbeak/Shearbeak</texPath>
+					<drawSize>3.57</drawSize>
+					<shadowData>
+						<volume>(1.1, 0.8, 1.1)</volume>
+						<offset>(0, 0, -0.15)</offset>
+					</shadowData>
+				</bodyGraphicData>
+				<dessicatedBodyGraphicData>
+					<texPath>Things/Pawn/Animal/PA_Shearbeak/Desiccated_Shearbeak</texPath>
+					<drawSize>3.57</drawSize>
+				</dessicatedBodyGraphicData>
+			</li>
+			<li>
+				<bodyGraphicData>
+					<texPath>Things/Pawn/Animal/PA_Shearbeak/Shearbeak</texPath>
+					<drawSize>4.42</drawSize>
+					<shadowData>
+						<volume>(1.4, 1, 1.4)</volume>
+						<offset>(0, 0, -0.1)</offset>
+					</shadowData>
+				</bodyGraphicData>
+				<dessicatedBodyGraphicData>
+					<texPath>Things/Pawn/Animal/PA_Shearbeak/Desiccated_Shearbeak</texPath>
+					<drawSize>4.42</drawSize>
+				</dessicatedBodyGraphicData>
+			</li>
+		</lifeStages>
+	</PawnKindDef>
+
+</Defs>

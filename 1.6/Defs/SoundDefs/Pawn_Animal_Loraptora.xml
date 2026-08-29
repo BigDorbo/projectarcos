@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+	<SoundDef ParentName="PA_SoundBase">
+		<defName>PA_Loraptora_Call</defName>
+		<subSounds>
+			<li>
+				<grains>
+					<li Class="AudioGrain_Clip">
+						<clipPath>Loraptora/Call</clipPath>
+					</li>
+				</grains>
+				<volumeRange>25~35</volumeRange>
+				<pitchRange>0.9~1.1</pitchRange>
+			</li>
+		</subSounds>
+	</SoundDef>
+
+	<SoundDef ParentName="PA_SoundBase">
+		<defName>PA_Loraptora_Angry</defName>
+		<subSounds>
+			<li>
+				<grains>
+					<li Class="AudioGrain_Clip">
+						<clipPath>Loraptora/Angry</clipPath>
+					</li>
+				</grains>
+				<volumeRange>25~35</volumeRange>
+				<pitchRange>0.9~1.1</pitchRange>
+			</li>
+		</subSounds>
+	</SoundDef>
+
+	<SoundDef ParentName="PA_SoundBase">
+		<defName>PA_Loraptora_Wounded</defName>
+		<subSounds>
+			<li>
+				<grains>
+					<li Class="AudioGrain_Clip">
+						<clipPath>Loraptora/Wounded</clipPath>
+					</li>
+				</grains>
+				<volumeRange>25~35</volumeRange>
+				<pitchRange>0.9~1.1</pitchRange>
+			</li>
+		</subSounds>
+	</SoundDef>
+
+	<SoundDef ParentName="PA_SoundBase">
+		<defName>PA_Loraptora_Death</defName>
+		<subSounds>
+			<li>
+				<grains>
+					<li Class="AudioGrain_Clip">
+						<clipPath>Loraptora/Death</clipPath>
+					</li>
+				</grains>
+				<volumeRange>25~35</volumeRange>
+				<pitchRange>0.9~1.1</pitchRange>
+			</li>
+		</subSounds>
+	</SoundDef>
+
+</Defs>

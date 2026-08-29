@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+	<ThingDef ParentName="PA_AnimalBase">
+		<defName>PA_Nightgorger</defName>
+		<label>nightgorger</label>
+		<description>An immense feathered tyrant found throughout many environments. Known to hunt the largest prey. Like an owl, it regurgitates pellets of indigestible material.</description>
+		<statBases>
+			<MoveSpeed>5</MoveSpeed>
+			<MarketValue>800</MarketValue>
+			<MeatAmount>60</MeatAmount>
+			<LeatherAmount>17</LeatherAmount>
+			<ComfyTemperatureMin>-50</ComfyTemperatureMin>
+			<ComfyTemperatureMax>45</ComfyTemperatureMax>
+			<Wildness>0.95</Wildness>
+			<FilthRate>16</FilthRate>
+		</statBases>
+		<comps>
+			<li Class="ProjectArcos.CompProperties_HoardCaster">
+				<ability>PA_CraftPellet</ability>
+				<initialCooldownRange>2500~30000</initialCooldownRange>
+			</li>
+			<li Class="CompProperties_EggLayer">
+				<eggFertilizedDef>PA_EggNightgorgerFertilized</eggFertilizedDef>
+				<eggUnfertilizedDef>PA_EggNightgorgerUnfertilized</eggUnfertilizedDef>
+				<eggFertilizationCountMax>1</eggFertilizationCountMax>
+				<eggLayIntervalDays>20</eggLayIntervalDays>
+				<eggProgressUnfertilizedMax>0.5</eggProgressUnfertilizedMax>
+				<eggCountRange>1</eggCountRange>
+			</li>
+		</comps>
+		<tools>
+			<li>
+				<label>teeth</label>
+				<capacities>
+					<li>Bite</li>
+				</capacities>
+				<power>23</power>
+				<cooldownTime>2.2</cooldownTime>
+				<linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
+			</li>
+			<li>
+				<label>talons</label>
+				<capacities>
+					<li>Cut</li>
+					<li>Scratch</li>
+				</capacities>
+				<power>17</power>
+				<cooldownTime>2</cooldownTime>
+				<linkedBodyPartsGroup>Feet</linkedBodyPartsGroup>
+			</li>
+			<li>
+				<label>head</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>14</power>
+				<cooldownTime>2</cooldownTime>
+				<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+				<ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+				<chanceFactor>0.2</chanceFactor>
+			</li>
+		</tools>
+		<race>
+			<body>PA_TheropodBody</body>
+			<baseBodySize>5</baseBodySize>
+			<baseHealthScale>1.5</baseHealthScale>
+			<baseHungerRate>2.0</baseHungerRate>
+			<predator>true</predator>
+			<herdMigrationAllowed>false</herdMigrationAllowed>
+			<maxPreyBodySize>5.0</maxPreyBodySize>
+			<foodType>CarnivoreAnimal</foodType>
+			<meatLabel>arcosaur meat</meatLabel>
+			<trainability>Intermediate</trainability>
+			<specialTrainables>
+				<li>PA_PelletCraft</li>
+			</specialTrainables>
+			<nameOnTameChance>1</nameOnTameChance>
+			<lifeExpectancy>45</lifeExpectancy>
+			<manhunterOnDamageChance>1</manhunterOnDamageChance>
+			<manhunterOnTameFailChance>0.3</manhunterOnTameFailChance>
+			<soundEating>PredatorLarge_Eat</soundEating>
+			<lifeStageAges>
+				<li>
+					<def>AnimalBaby</def>
+					<minAge>0</minAge>
+				</li>
+				<li>
+					<def>AnimalJuvenile</def>
+					<minAge>0.4</minAge>
+				</li>
+				<li>
+					<def>AnimalAdult</def>
+					<minAge>1.2</minAge>
+					<soundWounded>PA_Nightgorger_Wounded</soundWounded>
+					<soundDeath>PA_Nightgorger_Death</soundDeath>
+					<soundCall>PA_Nightgorger_Call</soundCall>
+					<soundAngry>PA_Nightgorger_Angry</soundAngry>
+				</li>
+			</lifeStageAges>
+			<headPosPerRotation>
+				<li>(0.0, 0, 0.35)</li>
+				<li>(0.25, 0, 0.25)</li>
+				<li>(0.0, 0, 0.2)</li>
+				<li>(-0.25, 0, 0.25)</li>
+			</headPosPerRotation>
+			<wildBiomes>
+				<TemperateForest>0.1</TemperateForest>
+				<BorealForest>0.1</BorealForest>
+				<WinterTaiga MayRequire="reel.wintertaigabiome2">0.1</WinterTaiga>
+				<ZBiome_AlpineMeadow MayRequire="zylle.MoreVanillaBiomes">0.1</ZBiome_AlpineMeadow>
+				<ZBiome_GlacialShield MayRequire="zylle.MoreVanillaBiomes">0.1</ZBiome_GlacialShield>
+				<GlacialPlain MayRequire="Ludeon.RimWorld.Odyssey">0.1</GlacialPlain>
+				<LavaField MayRequire="Ludeon.RimWorld.Odyssey">0.1</LavaField>
+				<RG_BoilingForest MayRequire="ReGrowth.BOTR.BoilingForest">0.1</RG_BoilingForest>
+				<RG_AspenForest MayRequire="ReGrowth.BOTR.AspenForest">0.1</RG_AspenForest>
+				<Scarlands MayRequire="Ludeon.RimWorld.Odyssey">0.1</Scarlands>
+				<TropicalRainforest>0.1</TropicalRainforest>
+				<Glowforest MayRequire="Ludeon.RimWorld.Odyssey">0.1</Glowforest>
+				<ZBiome_CloudForest MayRequire="zylle.MoreVanillaBiomes">0.1</ZBiome_CloudForest>
+				<Outland_ToxicForest MayRequire="Neronix17.Outland.ToxicForest">0.1</Outland_ToxicForest>
+				<AridShrubland>0.1</AridShrubland>
+				<Grasslands MayRequire="Ludeon.RimWorld.Odyssey">0.1</Grasslands>
+				<ZBiome_Grasslands MayRequire="zylle.MoreVanillaBiomes">0.1</ZBiome_Grasslands>
+				<ZBiome_Badlands MayRequire="zylle.MoreVanillaBiomes">0.1</ZBiome_Badlands>
+				<Tundra>0.1</Tundra>
+			</wildBiomes>
+		</race>
+		<tradeTags>
+			<li>AnimalExotic</li>
+			<li>AnimalFighter</li>
+		</tradeTags>
+	</ThingDef>
+
+	<PawnKindDef ParentName="AnimalKindBase">
+		<defName>PA_Nightgorger</defName>
+		<label>nightgorger</label>
+		<ecoSystemWeight>3</ecoSystemWeight>
+		<combatPower>300</combatPower>
+		<wildGroupSize>1~1</wildGroupSize>
+		<alternateGraphicChance>0.75</alternateGraphicChance>
+		<alternateGraphics>
+			<li>
+				<texPath>Things/Pawn/Animal/PA_Nightgorger/NightgorgerB</texPath>
+			</li>
+			<li>
+				<texPath>Things/Pawn/Animal/PA_Nightgorger/NightgorgerC</texPath>
+			</li>
+			<li>
+				<texPath>Things/Pawn/Animal/PA_Nightgorger/NightgorgerD</texPath>
+			</li>
+		</alternateGraphics>
+		<race>PA_Nightgorger</race>
+		<lifeStages>
+			<li>
+				<bodyGraphicData>
+					<texPath>Things/Pawn/Animal/PA_Nightgorger/Nightgorger</texPath>
+					<drawSize>4.32</drawSize>
+					<shadowData>
+						<volume>(0.9, 0.75, 0.9)</volume>
+						<offset>(0, 0, -0.75)</offset>
+					</shadowData>
+				</bodyGraphicData>
+				<dessicatedBodyGraphicData>
+					<texPath>Things/Pawn/Animal/PA_Nightgorger/Desiccated_Nightgorger</texPath>
+					<drawSize>4.32</drawSize>
+				</dessicatedBodyGraphicData>
+			</li>
+			<li>
+				<bodyGraphicData>
+					<texPath>Things/Pawn/Animal/PA_Nightgorger/Nightgorger</texPath>
+					<drawSize>6.48</drawSize>
+					<shadowData>
+						<volume>(1.35, 1.05, 1.35)</volume>
+						<offset>(0, 0, -0.6)</offset>
+					</shadowData>
+				</bodyGraphicData>
+				<dessicatedBodyGraphicData>
+					<texPath>Things/Pawn/Animal/PA_Nightgorger/Desiccated_Nightgorger</texPath>
+					<drawSize>6.48</drawSize>
+				</dessicatedBodyGraphicData>
+			</li>
+			<li>
+				<bodyGraphicData>
+					<texPath>Things/Pawn/Animal/PA_Nightgorger/Nightgorger</texPath>
+					<drawSize>9.45</drawSize>
+					<shadowData>
+						<volume>(1.8, 1.35, 1.8)</volume>
+						<offset>(0, 0, -0.45)</offset>
+					</shadowData>
+				</bodyGraphicData>
+				<dessicatedBodyGraphicData>
+					<texPath>Things/Pawn/Animal/PA_Nightgorger/Desiccated_Nightgorger</texPath>
+					<drawSize>9.45</drawSize>
+				</dessicatedBodyGraphicData>
+			</li>
+		</lifeStages>
+	</PawnKindDef>
+
+</Defs>

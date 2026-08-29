@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+	<ThingDef ParentName="PA_AnimalBase">
+		<defName>PA_Clubtail</defName>
+		<label>clubtail</label>
+		<description>A plated grazer of arid rangeland. Healthy adults spar among themselves. Scholars argue over whether the sparring is courtship, dominance, or simple recreation.</description>
+		<statBases>
+			<MoveSpeed>3.4</MoveSpeed>
+			<MarketValue>700</MarketValue>
+			<ComfyTemperatureMin>-15</ComfyTemperatureMin>
+			<ComfyTemperatureMax>50</ComfyTemperatureMax>
+			<ArmorRating_Sharp>0.65</ArmorRating_Sharp>
+			<ArmorRating_Blunt>0.45</ArmorRating_Blunt>
+			<Wildness>0.55</Wildness>
+			<FilthRate>15</FilthRate>
+		</statBases>
+		<tools>
+			<li>
+				<label>clubtail</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>24</power>
+				<cooldownTime>2.6</cooldownTime>
+				<linkedBodyPartsGroup>PA_TailClub</linkedBodyPartsGroup>
+			</li>
+			<li>
+				<label>head</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>14</power>
+				<cooldownTime>2</cooldownTime>
+				<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+				<ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+				<chanceFactor>0.5</chanceFactor>
+			</li>
+		</tools>
+		<comps>
+			<li Class="CompProperties_EggLayer">
+				<eggFertilizedDef>PA_EggClubtailFertilized</eggFertilizedDef>
+				<eggUnfertilizedDef>PA_EggClubtailUnfertilized</eggUnfertilizedDef>
+				<eggFertilizationCountMax>1</eggFertilizationCountMax>
+				<eggLayIntervalDays>10</eggLayIntervalDays>
+				<eggProgressUnfertilizedMax>0.5</eggProgressUnfertilizedMax>
+				<eggCountRange>1</eggCountRange>
+			</li>
+		</comps>
+		<race>
+			<body>PA_ClubtailQuadrupedBody</body>
+			<baseBodySize>3.0</baseBodySize>
+			<baseHealthScale>1.5</baseHealthScale>
+			<baseHungerRate>1.07</baseHungerRate>
+			<herdAnimal>true</herdAnimal>
+			<foodType>VegetarianRoughAnimal</foodType>
+			<roamMtbDays>2</roamMtbDays>
+			<useMeatFrom>PA_Nightgorger</useMeatFrom>
+			<trainability>Intermediate</trainability>
+			<lifeExpectancy>45</lifeExpectancy>
+			<manhunterOnDamageChance>0.2</manhunterOnDamageChance>
+			<manhunterOnTameFailChance>0.1</manhunterOnTameFailChance>
+			<soundEating>Herbivore_Eat</soundEating>
+			<lifeStageAges>
+				<li>
+					<def>AnimalBaby</def>
+					<minAge>0</minAge>
+				</li>
+				<li>
+					<def>AnimalJuvenile</def>
+					<minAge>0.3</minAge>
+				</li>
+				<li>
+					<def>AnimalAdult</def>
+					<minAge>0.9</minAge>
+					<soundWounded>PA_Clubtail_Wounded</soundWounded>
+					<soundDeath>PA_Clubtail_Death</soundDeath>
+					<soundCall>PA_Clubtail_Call</soundCall>
+					<soundAngry>PA_Clubtail_Angry</soundAngry>
+				</li>
+			</lifeStageAges>
+			<headPosPerRotation>
+				<li>(0, 0, 0.2)</li>
+				<li>(0.56, 0, 0.04)</li>
+				<li>(0, 0, 0.04)</li>
+				<li>(-0.56, 0, 0.04)</li>
+			</headPosPerRotation>
+			<wildBiomes>
+				<AridShrubland>0.5</AridShrubland>
+				<Desert>0.5</Desert>
+				<ExtremeDesert>0.5</ExtremeDesert>
+				<Grasslands MayRequire="Ludeon.RimWorld.Odyssey">0.5</Grasslands>
+				<ZBiome_Badlands MayRequire="zylle.MoreVanillaBiomes">0.5</ZBiome_Badlands>
+				<ZBiome_DesertOasis MayRequire="zylle.MoreVanillaBiomes">0.5</ZBiome_DesertOasis>
+				<ZBiome_Grasslands MayRequire="zylle.MoreVanillaBiomes">0.5</ZBiome_Grasslands>
+			</wildBiomes>
+		</race>
+		<tradeTags>
+			<li>AnimalCommon</li>
+			<li>AnimalFarm</li>
+		</tradeTags>
+	</ThingDef>
+
+	<PawnKindDef ParentName="AnimalKindBase">
+		<defName>PA_Clubtail</defName>
+		<ecoSystemWeight>1.5</ecoSystemWeight>
+		<label>clubtail</label>
+		<race>PA_Clubtail</race>
+		<combatPower>260</combatPower>
+		<wildGroupSize>1~2</wildGroupSize>
+		<lifeStages>
+			<li>
+				<bodyGraphicData>
+					<texPath>Things/Pawn/Animal/PA_Clubtail/Clubtail</texPath>
+					<drawSize>3.24</drawSize>
+					<shadowData>
+						<volume>(1, 0.8, 1)</volume>
+						<offset>(0, 0, -0.2)</offset>
+					</shadowData>
+				</bodyGraphicData>
+				<dessicatedBodyGraphicData>
+					<texPath>Things/Pawn/Animal/PA_Clubtail/Desiccated_Clubtail</texPath>
+					<drawSize>3.24</drawSize>
+				</dessicatedBodyGraphicData>
+			</li>
+			<li>
+				<bodyGraphicData>
+					<texPath>Things/Pawn/Animal/PA_Clubtail/Clubtail</texPath>
+					<drawSize>4.32</drawSize>
+					<shadowData>
+						<volume>(1.3, 1, 1.3)</volume>
+						<offset>(0, 0, -0.15)</offset>
+					</shadowData>
+				</bodyGraphicData>
+				<dessicatedBodyGraphicData>
+					<texPath>Things/Pawn/Animal/PA_Clubtail/Desiccated_Clubtail</texPath>
+					<drawSize>4.32</drawSize>
+				</dessicatedBodyGraphicData>
+			</li>
+			<li>
+				<bodyGraphicData>
+					<texPath>Things/Pawn/Animal/PA_Clubtail/Clubtail</texPath>
+					<drawSize>5.4</drawSize>
+					<shadowData>
+						<volume>(1.6, 1.2, 1.6)</volume>
+						<offset>(0, 0, -0.1)</offset>
+					</shadowData>
+				</bodyGraphicData>
+				<dessicatedBodyGraphicData>
+					<texPath>Things/Pawn/Animal/PA_Clubtail/Desiccated_Clubtail</texPath>
+					<drawSize>5.4</drawSize>
+				</dessicatedBodyGraphicData>
+			</li>
+		</lifeStages>
+	</PawnKindDef>
+
+</Defs>

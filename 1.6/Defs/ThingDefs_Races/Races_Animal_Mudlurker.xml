@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+	<ThingDef ParentName="PA_AnimalBase">
+		<defName>PA_Mudlurker</defName>
+		<label>mudlurker</label>
+		<description>A solitary browser of swamps and bogs. Known to defend itself with its flat heavy tail and thick thumb spikes. It likes to catch and hoard fish. It grazes on ordinary plants otherwise.</description>
+		<statBases>
+			<MoveSpeed>3.9</MoveSpeed>
+			<MarketValue>300</MarketValue>
+			<ComfyTemperatureMin>-25</ComfyTemperatureMin>
+			<ComfyTemperatureMax>45</ComfyTemperatureMax>
+			<Wildness>0.6</Wildness>
+			<FilthRate>10</FilthRate>
+		</statBases>
+		<tools>
+			<li>
+				<label>tail slap</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>16</power>
+				<cooldownTime>2.4</cooldownTime>
+				<linkedBodyPartsGroup>PA_TailClub</linkedBodyPartsGroup>
+			</li>
+			<li>
+				<label>thumb spikes</label>
+				<capacities>
+					<li>Stab</li>
+				</capacities>
+				<power>11</power>
+				<cooldownTime>1.8</cooldownTime>
+				<linkedBodyPartsGroup>PA_ThumbSpikes</linkedBodyPartsGroup>
+			</li>
+			<li>
+				<label>teeth</label>
+				<capacities>
+					<li>Bite</li>
+				</capacities>
+				<power>12</power>
+				<cooldownTime>2.2</cooldownTime>
+				<linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
+				<chanceFactor>0.7</chanceFactor>
+			</li>
+			<li>
+				<label>head</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>6</power>
+				<cooldownTime>2</cooldownTime>
+				<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+				<ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+				<chanceFactor>0.2</chanceFactor>
+			</li>
+		</tools>
+		<comps>
+			<li Class="CompProperties_EggLayer">
+				<eggFertilizedDef>PA_EggMudlurkerFertilized</eggFertilizedDef>
+				<eggUnfertilizedDef>PA_EggMudlurkerUnfertilized</eggUnfertilizedDef>
+				<eggFertilizationCountMax>1</eggFertilizationCountMax>
+				<eggLayIntervalDays>8</eggLayIntervalDays>
+				<eggProgressUnfertilizedMax>0.5</eggProgressUnfertilizedMax>
+				<eggCountRange>1~2</eggCountRange>
+			</li>
+			<li Class="ProjectArcos.CompProperties_HoardCaster">
+				<ability>PA_CraftCache</ability>
+				<initialCooldownRange>2500~30000</initialCooldownRange>
+			</li>
+		</comps>
+		<race>
+			<body>PA_TheropodBodyWithArms</body>
+			<baseBodySize>1.6</baseBodySize>
+			<baseHealthScale>1.0</baseHealthScale>
+			<baseHungerRate>0.3</baseHungerRate>
+			<herdAnimal>true</herdAnimal>
+			<herdMigrationAllowed>false</herdMigrationAllowed>
+			<waterSeeker>true</waterSeeker>
+			<foodType>VegetarianRoughAnimal</foodType>
+			<useMeatFrom>PA_Nightgorger</useMeatFrom>
+			<trainability>Intermediate</trainability>
+			<specialTrainables>
+				<li MayRequireAnyOf="Ludeon.RimWorld.Odyssey,VanillaExpanded.VCEF">PA_CacheCraft</li>
+			</specialTrainables>
+			<lifeExpectancy>30</lifeExpectancy>
+			<manhunterOnDamageChance>0.5</manhunterOnDamageChance>
+			<manhunterOnTameFailChance>0.1</manhunterOnTameFailChance>
+			<soundEating>Herbivore_Eat</soundEating>
+			<lifeStageAges>
+				<li>
+					<def>AnimalBaby</def>
+					<minAge>0</minAge>
+				</li>
+				<li>
+					<def>AnimalJuvenile</def>
+					<minAge>0.12</minAge>
+				</li>
+				<li>
+					<def>AnimalAdult</def>
+					<minAge>0.3</minAge>
+					<soundWounded>PA_Mudlurker_Wounded</soundWounded>
+					<soundDeath>PA_Mudlurker_Death</soundDeath>
+					<soundCall>PA_Mudlurker_Call</soundCall>
+					<soundAngry>PA_Mudlurker_Angry</soundAngry>
+				</li>
+			</lifeStageAges>
+			<headPosPerRotation>
+				<li>(0, 0, 0.44)</li>
+				<li>(0.52, 0, 0.32)</li>
+				<li>(0, 0, 0.1)</li>
+				<li>(-0.52, 0, 0.32)</li>
+			</headPosPerRotation>
+			<wildBiomes>
+				<TemperateSwamp>0.35</TemperateSwamp>
+				<TropicalSwamp>0.35</TropicalSwamp>
+				<ColdBog>0.35</ColdBog>
+				<ZBiome_Marsh MayRequire="zylle.MoreVanillaBiomes">0.35</ZBiome_Marsh>
+				<ZBiome_CoastalDunes MayRequire="zylle.MoreVanillaBiomes">0.35</ZBiome_CoastalDunes>
+				<ZBiome_Sandbar_NoBeach MayRequire="zylle.MoreVanillaBiomes">0.35</ZBiome_Sandbar_NoBeach>
+			</wildBiomes>
+		</race>
+		<tradeTags>
+			<li>AnimalCommon</li>
+			<li>AnimalFighter</li>
+		</tradeTags>
+	</ThingDef>
+
+	<PawnKindDef ParentName="AnimalKindBase">
+		<defName>PA_Mudlurker</defName>
+		<ecoSystemWeight>0.5</ecoSystemWeight>
+		<label>mudlurker</label>
+		<race>PA_Mudlurker</race>
+		<combatPower>100</combatPower>
+		<wildGroupSize>1~1</wildGroupSize>
+		<lifeStages>
+			<li>
+				<bodyGraphicData>
+					<texPath>Things/Pawn/Animal/PA_Mudlurker/Mudlurker</texPath>
+					<drawSize>2.8</drawSize>
+					<shadowData>
+						<volume>(0.7, 0.6, 0.7)</volume>
+						<offset>(0, 0, -0.2)</offset>
+					</shadowData>
+				</bodyGraphicData>
+				<dessicatedBodyGraphicData>
+					<texPath>Things/Pawn/Animal/PA_Mudlurker/Desiccated_Mudlurker</texPath>
+					<drawSize>2.8</drawSize>
+				</dessicatedBodyGraphicData>
+			</li>
+			<li>
+				<bodyGraphicData>
+					<texPath>Things/Pawn/Animal/PA_Mudlurker/Mudlurker</texPath>
+					<drawSize>3.6</drawSize>
+					<shadowData>
+						<volume>(0.9, 0.7, 0.9)</volume>
+						<offset>(0, 0, -0.15)</offset>
+					</shadowData>
+				</bodyGraphicData>
+				<dessicatedBodyGraphicData>
+					<texPath>Things/Pawn/Animal/PA_Mudlurker/Desiccated_Mudlurker</texPath>
+					<drawSize>3.6</drawSize>
+				</dessicatedBodyGraphicData>
+			</li>
+			<li>
+				<bodyGraphicData>
+					<texPath>Things/Pawn/Animal/PA_Mudlurker/Mudlurker</texPath>
+					<drawSize>4.4</drawSize>
+					<shadowData>
+						<volume>(1.1, 0.8, 1.1)</volume>
+						<offset>(0, 0, -0.1)</offset>
+					</shadowData>
+				</bodyGraphicData>
+				<dessicatedBodyGraphicData>
+					<texPath>Things/Pawn/Animal/PA_Mudlurker/Desiccated_Mudlurker</texPath>
+					<drawSize>4.4</drawSize>
+				</dessicatedBodyGraphicData>
+			</li>
+		</lifeStages>
+	</PawnKindDef>
+
+</Defs>

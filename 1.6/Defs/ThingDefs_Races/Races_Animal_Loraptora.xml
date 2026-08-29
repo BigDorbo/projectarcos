@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+	<ThingDef ParentName="PA_AnimalBase">
+		<defName>PA_Loraptora</defName>
+		<label>loraptora</label>
+		<description>An agile hybrid easily adapted to new environments. Biosphere managers have noted that this animal roams in packs.</description>
+		<statBases>
+			<MoveSpeed>6</MoveSpeed>
+			<MarketValue>400</MarketValue>
+			<ComfyTemperatureMin>-20</ComfyTemperatureMin>
+			<ComfyTemperatureMax>45</ComfyTemperatureMax>
+			<Wildness>0.6</Wildness>
+			<FilthRate>4</FilthRate>
+		</statBases>
+		<comps>
+			<li Class="CompProperties_EggLayer">
+				<eggFertilizedDef>PA_EggLoraptoraFertilized</eggFertilizedDef>
+				<eggUnfertilizedDef>PA_EggLoraptoraUnfertilized</eggUnfertilizedDef>
+				<eggFertilizationCountMax>1</eggFertilizationCountMax>
+				<eggLayIntervalDays>4</eggLayIntervalDays>
+				<eggProgressUnfertilizedMax>0.5</eggProgressUnfertilizedMax>
+				<eggCountRange>1~2</eggCountRange>
+			</li>
+		</comps>
+		<tools>
+			<li>
+				<label>sickle claw</label>
+				<capacities>
+					<li>Cut</li>
+				</capacities>
+				<power>10</power>
+				<cooldownTime>1.5</cooldownTime>
+				<linkedBodyPartsGroup>PA_SickleClaws</linkedBodyPartsGroup>
+				<surpriseAttack>
+					<extraMeleeDamages>
+						<li>
+							<def>Stun</def>
+							<amount>14</amount>
+						</li>
+					</extraMeleeDamages>
+				</surpriseAttack>
+			</li>
+			<li>
+				<label>teeth</label>
+				<capacities>
+					<li>Bite</li>
+				</capacities>
+				<power>11</power>
+				<cooldownTime>2</cooldownTime>
+				<linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
+				<chanceFactor>0.7</chanceFactor>
+			</li>
+			<li>
+				<label>head</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>3</power>
+				<cooldownTime>2</cooldownTime>
+				<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+				<ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+				<chanceFactor>0.2</chanceFactor>
+			</li>
+		</tools>
+		<race>
+			<body>PA_TheropodBodyWithSickleClaws</body>
+			<baseBodySize>0.55</baseBodySize>
+			<baseHealthScale>0.70</baseHealthScale>
+			<baseHungerRate>0.12</baseHungerRate>
+			<predator>true</predator>
+			<herdAnimal>true</herdAnimal>
+			<maxPreyBodySize>3.5</maxPreyBodySize>
+			<foodType>CarnivoreAnimal, OvivoreAnimal</foodType>
+			<useMeatFrom>PA_Nightgorger</useMeatFrom>
+			<trainability>Advanced</trainability>
+			<petness>0.6</petness>
+			<nuzzleMtbHours>12</nuzzleMtbHours>
+			<lifeExpectancy>50</lifeExpectancy>
+			<manhunterOnDamageChance>0.4</manhunterOnDamageChance>
+			<manhunterOnTameFailChance>0.1</manhunterOnTameFailChance>
+			<soundEating>PredatorSmall_Eat</soundEating>
+			<soundMeleeHitPawn>Pawn_Melee_SmallScratch_HitPawn</soundMeleeHitPawn>
+			<soundMeleeHitBuilding>Pawn_Melee_SmallScratch_HitBuilding</soundMeleeHitBuilding>
+			<soundMeleeMiss>Pawn_Melee_SmallScratch_Miss</soundMeleeMiss>
+			<lifeStageAges>
+				<li>
+					<def>AnimalBaby</def>
+					<minAge>0</minAge>
+				</li>
+				<li>
+					<def>AnimalJuvenile</def>
+					<minAge>0.15</minAge>
+				</li>
+				<li>
+					<def>AnimalAdult</def>
+					<minAge>0.4</minAge>
+					<soundWounded>PA_Loraptora_Wounded</soundWounded>
+					<soundDeath>PA_Loraptora_Death</soundDeath>
+					<soundCall>PA_Loraptora_Call</soundCall>
+					<soundAngry>PA_Loraptora_Angry</soundAngry>
+				</li>
+			</lifeStageAges>
+			<headPosPerRotation>
+				<li>(0.0, 0, 0.25)</li>
+				<li>(0.28, 0, 0.14)</li>
+				<li>(0.0, 0, 0.02)</li>
+				<li>(-0.28, 0, 0.14)</li>
+			</headPosPerRotation>
+			<wildBiomes>
+				<TemperateForest>0.5</TemperateForest>
+				<TemperateSwamp>0.5</TemperateSwamp>
+				<ZBiome_Marsh MayRequire="zylle.MoreVanillaBiomes">0.5</ZBiome_Marsh>
+				<BorealForest>0.5</BorealForest>
+				<WinterTaiga MayRequire="reel.wintertaigabiome2">0.5</WinterTaiga>
+				<RG_AspenForest MayRequire="ReGrowth.BOTR.AspenForest">0.5</RG_AspenForest>
+				<RG_BoilingForest MayRequire="ReGrowth.BOTR.BoilingForest">0.5</RG_BoilingForest>
+				<LavaField MayRequire="Ludeon.RimWorld.Odyssey">0.5</LavaField>
+				<TropicalRainforest>0.5</TropicalRainforest>
+				<TropicalSwamp>0.5</TropicalSwamp>
+				<ZBiome_CloudForest MayRequire="zylle.MoreVanillaBiomes">0.5</ZBiome_CloudForest>
+				<Outland_ToxicForest MayRequire="Neronix17.Outland.ToxicForest">0.5</Outland_ToxicForest>
+				<Glowforest MayRequire="Ludeon.RimWorld.Odyssey">0.5</Glowforest>
+				<Scarlands MayRequire="Ludeon.RimWorld.Odyssey">0.5</Scarlands>
+				<ZBiome_Badlands MayRequire="zylle.MoreVanillaBiomes">0.5</ZBiome_Badlands>
+			</wildBiomes>
+		</race>
+		<tradeTags>
+			<li>AnimalUncommon</li>
+			<li>AnimalPet</li>
+			<li>AnimalFighter</li>
+		</tradeTags>
+	</ThingDef>
+
+	<PawnKindDef ParentName="AnimalKindBase">
+		<defName>PA_Loraptora</defName>
+		<label>loraptora</label>
+		<ecoSystemWeight>1</ecoSystemWeight>
+		<combatPower>55</combatPower>
+		<wildGroupSize>1~2</wildGroupSize>
+		<alternateGraphicChance>0.75</alternateGraphicChance>
+		<alternateGraphics>
+			<li>
+				<texPath>Things/Pawn/Animal/PA_Loraptora/LoraptoraB</texPath>
+			</li>
+			<li>
+				<texPath>Things/Pawn/Animal/PA_Loraptora/LoraptoraC</texPath>
+			</li>
+			<li>
+				<texPath>Things/Pawn/Animal/PA_Loraptora/LoraptoraD</texPath>
+			</li>
+		</alternateGraphics>
+		<race>PA_Loraptora</race>
+		<lifeStages>
+			<li>
+				<bodyGraphicData>
+					<texPath>Things/Pawn/Animal/PA_Loraptora/Loraptora</texPath>
+					<drawSize>1.0</drawSize>
+					<shadowData>
+						<volume>(0.2, 0.2, 0.2)</volume>
+						<offset>(0, 0, -0.15)</offset>
+					</shadowData>
+				</bodyGraphicData>
+				<dessicatedBodyGraphicData>
+					<texPath>Things/Pawn/Animal/PA_Loraptora/Desiccated_Loraptora</texPath>
+					<drawSize>1.0</drawSize>
+				</dessicatedBodyGraphicData>
+			</li>
+			<li>
+				<bodyGraphicData>
+					<texPath>Things/Pawn/Animal/PA_Loraptora/Loraptora</texPath>
+					<drawSize>1.3</drawSize>
+					<shadowData>
+						<volume>(0.25, 0.25, 0.25)</volume>
+						<offset>(0, 0, -0.12)</offset>
+					</shadowData>
+				</bodyGraphicData>
+				<dessicatedBodyGraphicData>
+					<texPath>Things/Pawn/Animal/PA_Loraptora/Desiccated_Loraptora</texPath>
+					<drawSize>1.3</drawSize>
+				</dessicatedBodyGraphicData>
+			</li>
+			<li>
+				<bodyGraphicData>
+					<texPath>Things/Pawn/Animal/PA_Loraptora/Loraptora</texPath>
+					<drawSize>1.7</drawSize>
+					<shadowData>
+						<volume>(0.3, 0.3, 0.3)</volume>
+						<offset>(0, 0, -0.1)</offset>
+					</shadowData>
+				</bodyGraphicData>
+				<dessicatedBodyGraphicData>
+					<texPath>Things/Pawn/Animal/PA_Loraptora/Desiccated_Loraptora</texPath>
+					<drawSize>1.7</drawSize>
+				</dessicatedBodyGraphicData>
+			</li>
+		</lifeStages>
+	</PawnKindDef>
+
+</Defs>
