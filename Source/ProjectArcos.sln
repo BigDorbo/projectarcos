@@ -1,0 +1,19 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProjectArcos", "ProjectArcos.csproj", "{823D9C27-088B-450C-AD6B-757CDDA9AEEB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{823D9C27-088B-450C-AD6B-757CDDA9AEEB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{823D9C27-088B-450C-AD6B-757CDDA9AEEB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{823D9C27-088B-450C-AD6B-757CDDA9AEEB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{823D9C27-088B-450C-AD6B-757CDDA9AEEB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
